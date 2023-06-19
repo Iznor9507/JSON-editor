@@ -42,7 +42,7 @@ const JsonEditor = memo(() => {
             borderRadius: "5px",
           }}
         >
-          Это не JSON код
+          Это не JSON код!
         </h1>
       ) : (
         <h1
@@ -53,7 +53,7 @@ const JsonEditor = memo(() => {
             borderRadius: "5px",
           }}
         >
-          Это валидный JSON код
+          Это валидный JSON код!
         </h1>
       )}
     </div>
