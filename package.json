@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://iznor9507.github.io/json-editor/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build -d dist",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
