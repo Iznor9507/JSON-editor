@@ -1,14 +1,12 @@
 import { memo, useEffect, useState } from "react";
-import { Input } from "antd";
+import { Alert, Input } from "antd";
 import { JsonService } from "../services/JsonSirvice";
 import style from "./JsonEditor.module.css";
 const { TextArea } = Input;
 
-const JsonEditor = memo(() => {
-  // для хранения текста json
-  const [jsonText, setJsonText] = useState("");
+const JsonEditor = () => {
 
-  //для хранения состояния ощибки
+  const [jsonText, setJsonText] = useState("");
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -36,20 +34,30 @@ const JsonEditor = memo(() => {
   }, [jsonText]);
 
   return (
-    <div>
-      {/* поле ввода */}
+    <>
       <TextArea
         value={jsonText}
         onChange={(e) => setJsonText(e.target.value)}
         rows={10}
       />
       {error ? (
-        <h1 className={style.not_json}>Это не JSON код!</h1>
+         <Alert
+         message="Error"
+         description="Это не JSON"
+         type="error"
+         showIcon
+       />
       ) : (
-        <h1 className={style.no_error}>Это валидный JSON код!</h1>
+        <Alert
+        message="Отлично"
+        description="Это валидный JSON"
+        type="success"
+        showIcon
+      />
       )}
-    </div>
+    </>
   );
-});
+};
 
-export default JsonEditor;
+const MemoizedJsonEditor = memo(JsonEditor);
+export default MemoizedJsonEditor;
