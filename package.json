@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://iznor9507.github.io/json-editor/",
+  "homepage": "https://iznor9507.github.io/json-editor",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
