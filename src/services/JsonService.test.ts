@@ -1,7 +1,4 @@
-import { JsonService } from "./JsonSirvice";
-
-
-
+import { JsonService } from "./JsonService";
 
 test("parseJson", () => {
   expect(JsonService.parseJson('{"key":"value"}')).toEqual({ key: "value" });

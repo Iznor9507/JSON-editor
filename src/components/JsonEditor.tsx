@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from "react";
 import { Alert, Input } from "antd";
-import { JsonService } from "../services/JsonSirvice";
+import { JsonService } from "../services/JsonService";
 const { TextArea } = Input;
 
 const JsonEditor = () => {
