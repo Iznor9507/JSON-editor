@@ -34,7 +34,7 @@ const JsonEditor = () => {
       />
       {error ? (
         <Alert
-          message="Ощибка"
+          message="Ошибка"
           description="Это не JSON"
           type="error"
           showIcon
