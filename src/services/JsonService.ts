@@ -21,4 +21,16 @@ export class JsonService {
       throw new Error("Неправильный JSON");
     }
   }
+
+  // Метод getStoredJson получает значение из localStorage по ключу "jsonText" и возвращает его.
+  // Если по данному ключу в localStorage ничего не сохранено, метод вернет null.
+  static getStoredJson() {
+    return localStorage.getItem("jsonText");
+  }
+
+  // Метод setStoredJson принимает строку jsonText и сохраняет ее в localStorage под ключом "jsonText".
+  // Если в localStorage уже есть значение по этому ключу, оно будет перезаписано.
+  static setStoredJson(jsonText: string) {
+    localStorage.setItem("jsonText", jsonText);
+  }
 }

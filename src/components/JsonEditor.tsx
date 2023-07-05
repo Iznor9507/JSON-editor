@@ -8,14 +8,14 @@ const JsonEditor = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const storedJsonText = localStorage.getItem("jsonText");
+    const storedJsonText = JsonService.getStoredJson();
     if (storedJsonText) {
       setJsonText(storedJsonText);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("jsonText", jsonText);
+    JsonService.setStoredJson(jsonText);
     try {
       const json = JsonService.parseJson(jsonText);
       console.log(json);
